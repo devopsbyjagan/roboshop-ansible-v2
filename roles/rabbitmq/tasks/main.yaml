@@ -13,8 +13,8 @@
     enabled: yes
 - name: create roboshop mq user
   community.rabbitmq.rabbitmq_user:
-    user: roboshop
-    password: roboshop123
+    user: "{{ MQ_USER }}"
+    password: "{{ MQ_PASSWORD }}"
     permissions:
       - vhost: /
         configure_priv: .*
